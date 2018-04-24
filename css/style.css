@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: navy;
+    font-family: monospace;
+    color: white;        
+}
+
+.navbar-brand {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar-button-collapse {
+    background-color: navy;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-left: auto;
+    /* Resetting the ul properties */
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.navbar-link {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar, .navbar-nav {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    
+    .navbar-nav {
+        margin-left: 0;        
+        display: none;
+    }
+    
+    .navbar-button-collapse {
+        display: initial;
+        align-self: flex-end;
+        position: absolute;
+    }
+    
+    .navbar-nav-collapse {
+        display: flex;
+    }
+}
